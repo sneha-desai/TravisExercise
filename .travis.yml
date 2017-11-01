@@ -1,2 +1,8 @@
 language: java
 install: ant deps
+install: ./install-dependencies.sh
+install:
+  - bundle install --path vendor/bundle
+  - npm install
+install: true
+script: bundle exec thor build
